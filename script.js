@@ -78,12 +78,12 @@ const GameController = (() => {
             vBoard.setField(index, getCurrentPlayerSign());
         }
         else{
-            //ADD FUNCTIONALITY HERE TO WARN PLAYER, CAN DELETE
+            //ADD FUNCTIONALITY HERE TO WARN PLAYER, CAN DELETE/MODIFY LATER
             console.log("ALERT:  PICK ANOTHER SQUARE");
             return;
         }
 
-        //CAN DELETE
+        //TESTING - CAN DELETE/MODIFY LATER
         console.log(vBoard.board);
 
         //Check for winner
@@ -156,7 +156,7 @@ const GameController = (() => {
         playerXwins = resultX.includes(true);
         playerOwins = resultO.includes(true);
 
-        //CAN DELETE
+        //CAN DELETE/MODIFY LATER
         console.log("Player X wins:" + playerXwins);
         console.log("Player X Indices:" + playerXindices);
         console.log("Player O wins:" + playerOwins);
@@ -207,6 +207,10 @@ const player2 = Player("O", "Bob");
 console.log(player2.getSign()); // "O"
 console.log(player2.getName()); // "Bob"
 
+
+
+
+
 //VirtualBoard IIFE Factory Function - Testing//
 
 const board = VirtualBoard;
@@ -228,123 +232,95 @@ console.log(board.getField(2)); // ""
 
 
 
+
+
 //GameController IIFE Factory Function - Testing 1//
+
 const gameController = GameController;
 
 console.log("--------------------------");
+console.log("                          ");
 gameController.playRound(0);
-//console.log(gameController.vBoard.board);
-console.log("Round:" + gameController.getRound());
-console.log("Game Won:" + gameController.getGameWon());
-console.log("Game Tie:" + gameController.getGameTie());
+
 console.log("--------------------------");
+console.log("                          ");
 gameController.playRound(1);
-//console.log(gameController.vBoard.board);
-console.log("Round:" + gameController.getRound());
-console.log("Game Won:" + gameController.getGameWon());
-console.log("Game Tie:" + gameController.getGameTie());
+
 console.log("--------------------------");
+console.log("                          ");
 gameController.playRound(5);
-//console.log(gameController.vBoard.board);
-console.log("Round:" + gameController.getRound());
-console.log("Game Won:" + gameController.getGameWon());
-console.log("Game Tie:" + gameController.getGameTie());
+
 console.log("--------------------------");
+console.log("                          ");
 gameController.playRound(2);
-//console.log(gameController.vBoard.board);
-console.log("Round:" + gameController.getRound());
-console.log("Game Won:" + gameController.getGameWon());
-console.log("Game Tie:" + gameController.getGameTie());
+
 console.log("--------------------------");
+console.log("                          ");
 gameController.playRound(6);
-//console.log(gameController.vBoard.board);
-console.log("Round:" + gameController.getRound());
-console.log("Game Won:" + gameController.getGameWon());
-console.log("Game Tie:" + gameController.getGameTie());
+
 console.log("--------------------------");
+console.log("                          ");
 gameController.playRound(3);
-//console.log(gameController.vBoard.board);
-console.log("Round:" + gameController.getRound());
-console.log("Game Won:" + gameController.getGameWon());
-console.log("Game Tie:" + gameController.getGameTie());
+
 console.log("--------------------------");
 gameController.playRound(7);
-//console.log(gameController.vBoard.board);
-console.log("Round:" + gameController.getRound());
-console.log("Game Won:" + gameController.getGameWon());
-console.log("Game Tie:" + gameController.getGameTie());
+
 console.log("--------------------------");
+console.log("                          ");
 gameController.playRound(4);
-//console.log(gameController.vBoard.board);
-console.log("Round:" + gameController.getRound());
-console.log("Game Won:" + gameController.getGameWon());
-console.log("Game Tie:" + gameController.getGameTie());
+
 console.log("--------------------------");
+console.log("                          ");
 gameController.playRound(8);
-//console.log(gameController.vBoard.board);
-console.log("Round:" + gameController.getRound());
-console.log("Game Won:" + gameController.getGameWon());
-console.log("Game Tie:" + gameController.getGameTie());
 
 
-/*
+
+
 
 //GameController IIFE Factory Function - Testing 2//
+
 const gameController = GameController;
 
 console.log("--------------------------");
+console.log("                          ");
 gameController.playRound(1);
-//console.log(gameController.vBoard.board);
-console.log("Round:" + gameController.getRound());
-console.log("Game Won:" + gameController.getGameWon());
-console.log("Game Tie:" + gameController.getGameTie());
+
 console.log("--------------------------");
+console.log("                          ");
 gameController.playRound(0);
-//console.log(gameController.vBoard.board);
-console.log("Round:" + gameController.getRound());
-console.log("Game Won:" + gameController.getGameWon());
-console.log("Game Tie:" + gameController.getGameTie());
+
 console.log("--------------------------");
+console.log("                          ");
 gameController.playRound(2);
-//console.log(gameController.vBoard.board);
-console.log("Round:" + gameController.getRound());
-console.log("Game Won:" + gameController.getGameWon());
-console.log("Game Tie:" + gameController.getGameTie());
+
 console.log("--------------------------");
+console.log("                          ");
 gameController.playRound(5);
-//console.log(gameController.vBoard.board);
-console.log("Round:" + gameController.getRound());
-console.log("Game Won:" + gameController.getGameWon());
-console.log("Game Tie:" + gameController.getGameTie());
+
 console.log("--------------------------");
+console.log("                          ");
 gameController.playRound(3);
-//console.log(gameController.vBoard.board);
-console.log("Round:" + gameController.getRound());
-console.log("Game Won:" + gameController.getGameWon());
-console.log("Game Tie:" + gameController.getGameTie());
+
 console.log("--------------------------");
+console.log("                          ");
 gameController.playRound(6);
-//console.log(gameController.vBoard.board);
-console.log("Round:" + gameController.getRound());
-console.log("Game Won:" + gameController.getGameWon());
-console.log("Game Tie:" + gameController.getGameTie());
+
 console.log("--------------------------");
 gameController.playRound(4);
-//console.log(gameController.vBoard.board);
-console.log("Round:" + gameController.getRound());
-console.log("Game Won:" + gameController.getGameWon());
-console.log("Game Tie:" + gameController.getGameTie());
+
 console.log("--------------------------");
+console.log("                          ");
 gameController.playRound(7);
-//console.log(gameController.vBoard.board);
-console.log("Round:" + gameController.getRound());
-console.log("Game Won:" + gameController.getGameWon());
-console.log("Game Tie:" + gameController.getGameTie());
+
 console.log("--------------------------");
+console.log("                          ");
 gameController.playRound(8);
-//console.log(gameController.vBoard.board);
-console.log("Round:" + gameController.getRound());
-console.log("Game Won:" + gameController.getGameWon());
-console.log("Game Tie:" + gameController.getGameTie());
+
+
 
 */
+
+
+
+
+
